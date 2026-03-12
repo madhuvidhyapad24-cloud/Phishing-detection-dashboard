@@ -1,0 +1,13 @@
+.gauge{
+position:relative;
+width:160px;
+margin:auto;
+}
+
+#score{
+position:absolute;
+top:50%;
+left:50%;
+transform:translate(-50%,-50%);
+font-size:22px;
+}
