@@ -1,1 +1,41 @@
+body{
+margin:0;
+font-family:Arial;
+background:linear-gradient(135deg,#020617,#0f172a);
+color:white;
+}
 
+.container{
+display:flex;
+height:100vh;
+}
+
+.main{
+flex:1;
+padding:20px;
+}
+
+.topbar{
+display:flex;
+gap:10px;
+margin-bottom:20px;
+}
+
+.topbar input{
+flex:1;
+padding:12px;
+border-radius:8px;
+border:none;
+}
+
+.topbar button{
+padding:12px 20px;
+background:red;
+border:none;
+border-radius:8px;
+color:white;
+}
+
+.hidden{
+display:none;
+}
