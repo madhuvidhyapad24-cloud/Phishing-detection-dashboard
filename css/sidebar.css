@@ -1,0 +1,27 @@
+.sidebar{
+width:220px;
+background:#020617;
+padding:20px;
+box-shadow:0 0 20px black;
+}
+
+.logo{
+color:red;
+margin-bottom:40px;
+}
+
+.sidebar li{
+list-style:none;
+padding:12px;
+cursor:pointer;
+border-radius:8px;
+margin-bottom:10px;
+}
+
+.sidebar li:hover{
+background:rgba(255,0,0,0.2);
+}
+
+.active{
+background:rgba(255,0,0,0.3);
+}
