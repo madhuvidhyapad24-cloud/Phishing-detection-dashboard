@@ -1,47 +1,73 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 <title>Phishing Detector</title>
+
 <link rel="stylesheet" href="css/layout.css">
 <link rel="stylesheet" href="css/sidebar.css">
 <link rel="stylesheet" href="css/dashboard.css">
 <link rel="stylesheet" href="css/cards.css">
 <link rel="stylesheet" href="css/gauge.css">
 <link rel="stylesheet" href="css/analyzer.css">
+
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
 <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css">
 <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
 </head>
+
 <body>
+
 <div class="container">
+
 <div class="sidebar">
+
 <h2 class="logo">Phishing Detector</h2>
+
 <ul>
 <li onclick="showPage('dashboard')" class="active">Dashboard</li>
 <li onclick="showPage('wallet')">Safe Wallet</li>
 <li onclick="showPage('education')">Education</li>
 <li onclick="showPage('report')">Report Site</li>
 </ul>
+
 </div>
+
+
 <div class="main">
+
 <div class="topbar">
+
 <input id="urlInput" placeholder="Scan suspicious URL">
+
 <button onclick="scan()">SCAN</button>
+
 </div>
+
 <div class="alert">
 ⚠ ALERT! PHISHING SITE DETECTED
 </div>
-<!-- DASHBOARD -->
+
+
 <div id="dashboard" class="page">
+
 <div class="cards">
+
 <div class="card">
+
 <h3>Risk Score</h3>
+
 <div class="gauge">
+
 <svg width="160" height="160">
+
 <circle cx="80" cy="80" r="70"
 stroke="#1e293b"
 stroke-width="12"
 fill="none"/>
+
 <circle id="progress"
 cx="80"
 cy="80"
@@ -52,54 +78,87 @@ fill="none"
 stroke-linecap="round"
 stroke-dasharray="440"
 stroke-dashoffset="440"/>
+
 </svg>
+
 <div id="score">0%</div>
+
 </div>
+
 </div>
+
 <div class="card">
+
 <h3>AI URL Analyzer</h3>
+
 <div class="ai-analysis">
+
 <p id="httpsCheck">HTTPS Check: Waiting...</p>
 <p id="lengthCheck">URL Length Check: Waiting...</p>
 <p id="ipCheck">IP Address Check: Waiting...</p>
 <p id="keywordCheck">Keyword Check: Waiting...</p>
 <p id="subdomainCheck">Subdomain Check: Waiting...</p>
+
 </div>
+
 </div>
+
 <div class="card">
+
 <h3>Threat Distribution</h3>
+
 <canvas id="chart"></canvas>
+
 </div>
+
 </div>
+
 <div class="cards">
+
 <div class="card">
 <h3>Attack Trend</h3>
 <canvas id="trendChart"></canvas>
 </div>
+
 <div class="card">
 <h3>Live Cyber Attack Map</h3>
 <div id="map"></div>
 </div>
+
 <div class="card">
 <h3>Global Threat Counter</h3>
 <p id="attackCount">1,402,578</p>
 </div>
+
 </div>
+
 <div class="cards">
+
 <div class="card">
 <h3>Recent Scans</h3>
 <ul id="history"></ul>
 </div>
+
+<div class="card">
+<h3>Emergency Panel</h3>
+<button class="danger">Lock Device</button>
+<button class="danger">Disconnect WiFi</button>
+<button class="danger">Report Authorities</button>
 </div>
+
 </div>
-<!-- WALLET -->
+
+</div>
+
+
 <div id="wallet" class="page hidden">
 <h2>Safe Wallet Mode</h2>
+<p>Secure payment environment enabled</p>
 <button>PayPal</button>
 <button>Visa</button>
 <button>Bank</button>
 </div>
-<!-- EDUCATION -->
+
 <div id="education" class="page hidden">
 <h2>Phishing Awareness</h2>
 <ul>
@@ -109,14 +168,17 @@ stroke-dashoffset="440"/>
 <li>Never share OTP</li>
 </ul>
 </div>
-<!-- REPORT -->
+
 <div id="report" class="page hidden">
 <h2>Report Suspicious Website</h2>
 <input placeholder="Enter suspicious URL">
-<button>Submit</button>
+<button>Submit Report</button>
 </div>
+
 </div>
+
 </div>
+
 <script src="js/navigation.js"></script>
 <script src="js/scanner.js"></script>
 <script src="js/gauge.js"></script>
@@ -125,5 +187,6 @@ stroke-dashoffset="440"/>
 <script src="js/charts.js"></script>
 <script src="js/map.js"></script>
 <script src="js/counter.js"></script>
+
 </body>
 </html>
